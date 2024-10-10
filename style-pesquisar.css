@@ -127,7 +127,7 @@ header a.active {
     background-color: #d1c8e4;
 }
 
-/* Estilo para mobile */
+/*Mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;

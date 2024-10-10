@@ -9,34 +9,37 @@ body {
     background-color: #4E3B31;
 }
 
+/* Barra de navegação */
 .navbar {
     background-color: #F7F3E7;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px; /* Aumentei o padding para dar mais espaço */
 }
 
 .nav-btn {
     background-color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 20px;
+    padding: 15px 30px; /* Aumentei o tamanho dos botões */
+    margin: 0 20px; /* Mais espaço entre os botões */
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* Aumentei o tamanho da fonte */
 }
 
+/* Barra de pesquisa */
 .search-bar {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 30px 0; /* Mais espaçamento */
 }
 
 .search-input {
-    width: 300px;
-    padding: 10px;
-    border-radius: 20px;
+    width: 400px; /* Aumentei a largura */
+    padding: 12px;
+    border-radius: 25px;
     border: 1px solid #ccc;
+    font-size: 16px;
 }
 
 .search-btn {
@@ -48,26 +51,27 @@ body {
     margin-left: -40px;
 }
 
+/* Grade de livros */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    gap: 30px; /* Aumentei o espaço entre os cartões */
+    padding: 40px; /* Aumentei o padding geral */
     justify-items: center;
 }
 
 .book-card {
     background-color: #F7F3E7;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Um pouco mais de sombra para destaque */
+    width: 240px; /* Aumentei a largura dos cartões */
+    padding: 20px; /* Mais padding */
     text-align: center;
 }
 
 .book-img {
-    height: 150px;
-    margin-bottom: 10px;
+    height: 180px; /* Aumentei a altura da imagem */
+    margin-bottom: 15px;
 }
 
 .book-img img {
@@ -78,10 +82,87 @@ body {
 }
 
 .book-info h4 {
-    margin: 10px 0 5px;
+    margin: 15px 0 8px; /* Mais espaçamento */
+    font-size: 18px; /* Aumentei o tamanho da fonte */
 }
 
 .book-info p {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
+}
+
+/* Estilo para o campo de entrada da página atual */
+.page-input {
+    width: 105px; /* Ajuste a largura do campo de entrada */
+    padding: 5px; /* Adiciona um pouco de padding */
+    border: 2px solid #fffefd; /* Borda padrão */
+    border-radius: 5px; /* Borda arredondada */
+    margin-top: 10px; /* Espaço acima do campo de entrada */
+}
+
+/* Estilo para o botão de atualizar */
+.update-btn {
+    background-color: #F7F3E7; /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 5px 10px; /* Padding interno do botão */
+    border-radius: 50px; /* Borda arredondada */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    margin-left: 10px; /* Espaço à esquerda do botão */
+    font-size: 14px; /* Tamanho da fonte do botão */
+}
+
+.update-btn:hover {
+    background-color: #E0D5C9; /* Cor de fundo ao passar o mouse */
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 20px;
+    z-index: 1000; /* Certifique-se de que o spinner está acima de outros elementos */
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-btn {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .book-card {
+        width: 100%;
+    }
 }
