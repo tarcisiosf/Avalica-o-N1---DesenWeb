@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4E3B31;
+}
+
+header {
+    background-color: #F7F3E7;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #e1e1e1;
+}
+
+header a.active {
+    background-color: #e1e1e1;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.search-container input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.search-container button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: -40px;
+}
+
+.search-container button img {
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    background-color: #F7F3E7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.card img {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #ececec;
+    margin-right: 20px;
+}
+
+.card .info {
+    flex: 1;
+}
+
+.card .info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card .info p {
+    color: #808080;
+    margin-bottom: 10px;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: #ece9f0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #d1c8e4;
+}
+
+/* Estilo para mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .search-container input {
+        width: 80%;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card img {
+        margin-bottom: 10px;
+    }
+}
